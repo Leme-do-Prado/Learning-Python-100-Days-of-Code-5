@@ -9,24 +9,19 @@ amount_of_symbols = int(input("What's the desired amount of symbols? Type in.\n"
 
 char = ""
 char_list = list(char)
-i = 0
-j = 0
-k = 0
 
-while i < amount_of_letters:
+
+for letter in range(1, amount_of_letters+1):
     char = random.choice(string.ascii_letters)
     char_list.append(char)
-    i += 1
 
-while j < amount_of_numbers:
+for number in range(1, amount_of_numbers+1):
     char = random.choice(string.digits)
     char_list.append(char)
-    j += 1
 
-while k < amount_of_symbols:
+for symbol in range(1, amount_of_symbols+1):
     char = random.choice(string.punctuation)
     char_list.append(char)
-    k += 1
 
 random.shuffle(char_list)
 
